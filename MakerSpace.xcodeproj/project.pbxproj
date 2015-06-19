@@ -13,6 +13,10 @@
 		7795A9781B34A10800A01709 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7795A9771B34A10800A01709 /* Images.xcassets */; };
 		7795A97B1B34A10800A01709 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7795A9791B34A10800A01709 /* LaunchScreen.xib */; };
 		7795A9871B34A10800A01709 /* MakerSpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7795A9861B34A10800A01709 /* MakerSpaceTests.swift */; };
+		7795A9951B34A65500A01709 /* GuillotineMenuSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7795A9911B34A65500A01709 /* GuillotineMenuSegue.swift */; };
+		7795A9961B34A65500A01709 /* GuillotineMenuTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7795A9921B34A65500A01709 /* GuillotineMenuTransitionAnimation.swift */; };
+		7795A9971B34A65500A01709 /* GuillotineMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7795A9931B34A65500A01709 /* GuillotineMenuViewController.swift */; };
+		7795A9981B34A65500A01709 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7795A9941B34A65500A01709 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		7795A9801B34A10800A01709 /* MakerSpaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakerSpaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7795A9851B34A10800A01709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7795A9861B34A10800A01709 /* MakerSpaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakerSpaceTests.swift; sourceTree = "<group>"; };
+		7795A9911B34A65500A01709 /* GuillotineMenuSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuillotineMenuSegue.swift; path = GuillotineMenu/GuillotineMenuSegue.swift; sourceTree = "<group>"; };
+		7795A9921B34A65500A01709 /* GuillotineMenuTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuillotineMenuTransitionAnimation.swift; path = GuillotineMenu/GuillotineMenuTransitionAnimation.swift; sourceTree = "<group>"; };
+		7795A9931B34A65500A01709 /* GuillotineMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuillotineMenuViewController.swift; path = GuillotineMenu/GuillotineMenuViewController.swift; sourceTree = "<group>"; };
+		7795A9941B34A65500A01709 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = GuillotineMenu/UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		7795A96D1B34A10800A01709 /* MakerSpace */ = {
 			isa = PBXGroup;
 			children = (
+				7795A9901B34A60400A01709 /* GuillotineMenu */,
 				7795A9701B34A10800A01709 /* AppDelegate.swift */,
 				7795A9721B34A10800A01709 /* ViewController.swift */,
 				7795A9741B34A10800A01709 /* Main.storyboard */,
@@ -110,6 +119,17 @@
 				7795A9851B34A10800A01709 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7795A9901B34A60400A01709 /* GuillotineMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7795A9911B34A65500A01709 /* GuillotineMenuSegue.swift */,
+				7795A9921B34A65500A01709 /* GuillotineMenuTransitionAnimation.swift */,
+				7795A9931B34A65500A01709 /* GuillotineMenuViewController.swift */,
+				7795A9941B34A65500A01709 /* UIViewExtension.swift */,
+			);
+			name = GuillotineMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7795A9981B34A65500A01709 /* UIViewExtension.swift in Sources */,
+				7795A9951B34A65500A01709 /* GuillotineMenuSegue.swift in Sources */,
 				7795A9731B34A10800A01709 /* ViewController.swift in Sources */,
+				7795A9971B34A65500A01709 /* GuillotineMenuViewController.swift in Sources */,
+				7795A9961B34A65500A01709 /* GuillotineMenuTransitionAnimation.swift in Sources */,
 				7795A9711B34A10800A01709 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +369,7 @@
 				INFOPLIST_FILE = MakerSpace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -355,6 +380,7 @@
 				INFOPLIST_FILE = MakerSpace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -411,6 +437,7 @@
 				7795A98C1B34A10800A01709 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7795A98D1B34A10800A01709 /* Build configuration list for PBXNativeTarget "MakerSpaceTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +446,7 @@
 				7795A98F1B34A10800A01709 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

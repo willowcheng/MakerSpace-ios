@@ -1,25 +1,169 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RSe-FW-GjZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Project-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MakerSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.17254901960784313" green="0.16470588235294117" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Project" id="NFb-gj-06d">
+                        <barButtonItem key="leftBarButtonItem" id="caC-3q-qhI">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4VI-fn-EVD">
+                                <rect key="frame" x="16" y="11" width="12" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ic_menuRotated">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OL0-a7-Qtf" kind="custom" customClass="GuillotineMenuSegue" customModule="MakerSpace" customModuleProvider="target" id="HzT-LI-Tkc"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navigationButton" destination="4VI-fn-EVD" id="KND-vy-n5a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="635.73333333333335" y="307.66666666666669"/>
+        </scene>
+        <!--Guillotine Menu View Controller-->
+        <scene sceneID="EwR-wO-u4A">
+            <objects>
+                <viewController id="OL0-a7-Qtf" customClass="GuillotineMenuViewController" customModule="MakerSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JA3-Cf-Cgn"/>
+                        <viewControllerLayoutGuide type="bottom" id="BAa-JM-APA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ifv-Jy-bKm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdU-Pl-yJX">
+                                <rect key="frame" x="10" y="159" width="300" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KET-Ha-qyD">
+                                        <rect key="frame" x="50" y="8" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="72I-FM-1K9"/>
+                                            <constraint firstAttribute="width" constant="200" id="hsV-mI-nPq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="PROJECT" image="ic_project-Small">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AL-jq-tCf">
+                                        <rect key="frame" x="50" y="56" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ae9-9e-hve"/>
+                                            <constraint firstAttribute="width" constant="200" id="KK6-NR-OX9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="REMOTE" image="ic_remote-Small">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPW-U8-C1m">
+                                        <rect key="frame" x="50" y="202" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="n7n-xJ-tKT"/>
+                                            <constraint firstAttribute="width" constant="200" id="vHr-oT-jcd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="SETTINGS" image="ic_settings-Small">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Bhh-pK-Mp9"/>
+                                    <constraint firstItem="9AL-jq-tCf" firstAttribute="top" secondItem="KET-Ha-qyD" secondAttribute="bottom" constant="8" id="DYH-rB-pp0"/>
+                                    <constraint firstAttribute="height" constant="250" id="HTp-JP-m2S"/>
+                                    <constraint firstItem="KET-Ha-qyD" firstAttribute="top" secondItem="gdU-Pl-yJX" secondAttribute="top" constant="8" id="OLH-gm-HXG"/>
+                                    <constraint firstAttribute="bottom" secondItem="cPW-U8-C1m" secondAttribute="bottom" constant="8" id="fai-KJ-OsF"/>
+                                    <constraint firstAttribute="centerX" secondItem="cPW-U8-C1m" secondAttribute="centerX" id="ghz-Ag-B6t"/>
+                                    <constraint firstAttribute="centerX" secondItem="9AL-jq-tCf" secondAttribute="centerX" id="kd4-ND-wFt"/>
+                                    <constraint firstAttribute="centerX" secondItem="KET-Ha-qyD" secondAttribute="centerX" id="z8G-NZ-VDl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x25-pk-yo2">
+                                <rect key="frame" x="60" y="263" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QM6-lo-e4l"/>
+                                    <constraint firstAttribute="width" constant="200" id="lIx-LW-qV9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="PROFILE" image="ic_profile-Small">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="gdU-Pl-yJX" secondAttribute="centerX" id="Ocn-Z0-8jz"/>
+                            <constraint firstAttribute="centerX" secondItem="x25-pk-yo2" secondAttribute="centerX" id="brY-hT-zzR"/>
+                            <constraint firstItem="x25-pk-yo2" firstAttribute="top" secondItem="9AL-jq-tCf" secondAttribute="bottom" constant="8" id="fNq-mh-xpX"/>
+                            <constraint firstAttribute="centerY" secondItem="gdU-Pl-yJX" secondAttribute="centerY" id="h84-tL-wWm"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0w-ZN-JeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047" y="307"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LWf-nW-AJK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RSe-FW-GjZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="uiC-JI-qic">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="E1Q-Ay-po8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Szd-2R-DZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203.19999999999999" y="307.66666666666669"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_menuRotated" width="10" height="14"/>
+        <image name="ic_profile-Small" width="29" height="29"/>
+        <image name="ic_project-Small" width="29" height="29"/>
+        <image name="ic_remote-Small" width="29" height="29"/>
+        <image name="ic_settings-Small" width="29" height="29"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
